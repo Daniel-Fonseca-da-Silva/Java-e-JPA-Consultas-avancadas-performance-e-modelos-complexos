@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "itens-pedidos")
+@Table(name = "itens_pedidos")
 public class ItemPedido {
 
     @Id
@@ -15,6 +15,7 @@ public class ItemPedido {
 
     @ManyToOne
     private Pedido pedido;
+    
     @ManyToOne
     private Produto produto;
 
@@ -22,6 +23,7 @@ public class ItemPedido {
 
     public ItemPedido(int quantidade, Pedido pedido, Produto produto) {
         this.quantidade = quantidade;
+        this.precoUnitario = produto.getPreco();
         this.pedido = pedido;
         this.produto = produto;
     }
