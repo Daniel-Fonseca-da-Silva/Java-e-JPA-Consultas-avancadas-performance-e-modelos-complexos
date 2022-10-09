@@ -1,11 +1,11 @@
 package dao;
 
-import modelo.Categoria;
-import modelo.Produto;
-
-import javax.persistence.EntityManager;
 import java.math.BigDecimal;
 import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import modelo.Produto;
 
 public class ProdutoDao {
 
